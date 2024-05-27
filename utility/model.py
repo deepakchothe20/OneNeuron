@@ -10,6 +10,15 @@ class Perceptron:
 
 
   def activationFunction(self, inputs, weights):
+    """Activation Function
+
+    Args:
+        inputs (_type_): _description_
+        weights (_type_): _description_
+
+    Returns:
+        _type_: _description_
+    """
     z = np.dot(inputs, weights) # z = W * X
     return np.where(z > 0, 1, 0) # CONDITION, IF TRUE, ELSE
 

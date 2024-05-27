@@ -8,17 +8,38 @@ import os
 plt.style.use("fivethirtyeight") # THIS IS STYLE OF GRAPHS
 
 def prepare_data(df):
+  """_summary_
+
+  Args:
+      df (_type_): _description_
+
+  Returns:
+      _type_: _description_
+  """
   X = df.drop("y", axis=1)
   y = df["y"]
   return X, y
 
 def save_model(model, filename):
+  """_summary_
+
+  Args:
+      model (_type_): _description_
+      filename (_type_): _description_
+  """
   model_dir = "models"
   os.makedirs(model_dir, exist_ok=True) # ONLY CREATE IF MODEL_DIR DOESN"T EXISTS
   filePath = os.path.join(model_dir, filename) # model/filename
   joblib.dump(model, filePath)
 
 def save_plot(df, file_name, model):
+  """_summary_
+
+  Args:
+      df (pd.Dataframegit): _description_
+      file_name (_type_): _description_
+      model (_type_): _description_
+  """
   def _create_base_plot(df):
     df.plot(kind="scatter", x="x1", y="x2", c="y", s=100, cmap="winter")
     plt.axhline(y=0, color="black", linestyle="--", linewidth=1)

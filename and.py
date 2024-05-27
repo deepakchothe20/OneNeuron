@@ -3,6 +3,8 @@ import pandas as pd
 from utility.utility import prepare_data,save_model,save_plot
 
 def main():
+    """
+    """
     AND = {
     "x1": [0,0,1,1],
     "x2": [0,1,0,1],

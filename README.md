@@ -18,5 +18,5 @@ x1| x2|x3
 ## Pointer
 * Point 1
 * point 2
-1.Point 1
-2.Point 2
+1 Point 1
+2 Point 2
